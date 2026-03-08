@@ -31,7 +31,13 @@
       </div>
 
       <div class="rruga-nav__center">
-        <a href="{{ routes.root_url }}" class="rruga-nav__brand">RRUGA STUDIOS</a>
+        <a href="{{ routes.root_url }}" class="rruga-nav__brand">
+          {% if settings.logo != blank %}
+            <img src="{{ settings.logo | image_url: width: 500 }}" alt="{{ shop.name }}" style="width: {{ settings.logo_width }}px; height: auto;">
+          {% else %}
+            {{ shop.name }}
+          {% endif %}
+        </a>
       </div>
 
       <div class="rruga-nav__right">
