@@ -4174,3 +4174,10 @@ sticky-header,
     margin-top: auto !important;
   }
 }
+
+@media screen and (min-width: 750px) {
+  .product-form__submit {
+    position: sticky !important;
+    bottom: 0 !important;
+  }
+}
