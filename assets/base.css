@@ -4133,21 +4133,22 @@ sticky-header,
 
 @media screen and (min-width: 750px) {
   .product__info-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    height: calc(100vh - 37px) !important;
     position: sticky !important;
     top: 0 !important;
-    height: calc(100vh - 37px) !important;
-    overflow: hidden !important;
   }
 
-  .product__info-container {
+  .product__info-container.product__column-sticky {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 !important;
     height: 100% !important;
-    position: relative !important;
+    position: static !important;
   }
 
-  .product-form__buttons {
-    position: absolute !important;
-    bottom: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
+  .product__info-container .product-form {
+    margin-top: auto !important;
   }
 }
