@@ -12,7 +12,7 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "collection": "all",
+        "collection": "all-col",
         "products_to_show": 48,
         "title": "",
         "heading_size": "h2",
