@@ -4142,3 +4142,9 @@ sticky-header,
 .card__information {
   text-align: center !important;
 }
+
+@media screen and (max-width: 749px) {
+  .rich-text__wrapper {
+    width: 100% !important;
+  }
+}
