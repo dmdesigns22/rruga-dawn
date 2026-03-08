@@ -10,7 +10,7 @@
 {
   "current": {
     "logo": "shopify://shop_images/8Asset_1.svg",
-    "logo_width": 90,
+    "logo_width": 80,
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
     "type_body_font": "assistant_n4",
@@ -149,7 +149,7 @@
           "preloader_text": "",
           "preloader_bg": "#000000",
           "preloader_color": "#ffffff",
-          "preloader_duration": 1800
+          "preloader_duration": 1100
         }
       }
     },
