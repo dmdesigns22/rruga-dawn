@@ -4135,6 +4135,7 @@ sticky-header,
   }
 }
 
-.template-cart #MainContent {
+.template-cart .section-template--collection,
+.template-cart [class*="section-"][class*="-padding"] {
   padding-top: 10px !important;
 }
