@@ -4102,10 +4102,12 @@ sticky-header,
   width: 100% !important;
   max-width: 100% !important;
   height: auto !important;
+  aspect-ratio: auto !important;
 }
 
 .product-media-container img {
   width: 100% !important;
   height: auto !important;
   object-fit: contain !important;
+  aspect-ratio: auto !important;
 }
