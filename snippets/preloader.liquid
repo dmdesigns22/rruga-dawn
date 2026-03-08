@@ -1,5 +1,5 @@
 {% if section.settings.show_preloader %}
-<div id="rruga-preloader">
+<div id="rruga-preloader" data-duration="{{ section.settings.preloader_duration | default: 1800 }}">
   <div class="rruga-preloader__inner">
     {% if section.settings.preloader_logo != blank %}
       <img src="{{ section.settings.preloader_logo | image_url: width: 600 }}" alt="logo" class="rruga-preloader__logo" width="{{ section.settings.logo_width }}" height="auto" style="width: {{ section.settings.logo_width }}px;">
