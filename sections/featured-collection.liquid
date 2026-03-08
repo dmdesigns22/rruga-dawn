@@ -544,11 +544,8 @@
 function initGsap(delay) {
   gsap.registerPlugin(ScrollTrigger);
   setTimeout(function() {
+    ScrollTrigger.refresh();
     gsap.from('.card__media, .card__information', {
-      scrollTrigger: {
-        trigger: '.product-grid',
-        start: 'top 80%',
-      },
       opacity: 0,
       duration: 0.8,
       stagger: 0.12,
