@@ -4134,3 +4134,8 @@ sticky-header,
     max-width: 50% !important;
   }
 }
+
+.template-cart .cart__main,
+.template-cart main {
+  padding-top: 10px !important;
+}
