@@ -143,6 +143,7 @@
         "type": "preloader",
         "settings": {
           "preloader_logo": "shopify://shop_images/8Asset_w.png",
+          "logo_width": 90,
           "preloader_text": "",
           "preloader_bg": "#000000",
           "preloader_color": "#ffffff",
