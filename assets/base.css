@@ -4178,3 +4178,9 @@ sticky-header,
     border-right: none !important;
   }
 }
+
+.rruga-nav__center img,
+.rruga-nav__center a {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
