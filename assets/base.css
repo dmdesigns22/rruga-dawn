@@ -4184,3 +4184,8 @@ sticky-header,
   padding-top: 5px !important;
   padding-bottom: 5px !important;
 }
+
+.related-products .related-products__heading,
+#shopify-section-related-products .related-products__heading {
+  padding-left: 10px !important;
+}
