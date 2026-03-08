@@ -25,9 +25,9 @@
     <nav class="rruga-nav">
 
       <div class="rruga-nav__left">
-        <a href="{{ routes.root_url }}" class="rruga-nav__item {% if request.path == '/' %}nav-active{% endif %}">HOME</a>
-        <a href="{{ routes.collections_url }}" class="rruga-nav__item {% if request.path contains '/collections' %}nav-active{% endif %}">CATALOG</a>
-        <a href="/pages/contact" class="rruga-nav__item {% if request.path contains '/pages/contact' %}nav-active{% endif %}">CONTACT</a>
+        {% for link in linklists.main-menu.links %}
+          <a href="{{ link.url }}" class="rruga-nav__item {% if link.url == request.path %}nav-active{% endif %}">{{ link.title }}</a>
+        {% endfor %}
       </div>
 
       <div class="rruga-nav__center">

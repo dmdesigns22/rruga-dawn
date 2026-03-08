@@ -3781,22 +3781,25 @@ main#MainContent,
   max-width: 100% !important;
 }
 
-/* Force full-width: override --page-width variable and .page-width padding */
-:root {
-  --page-width: 100% !important;
-}
-
-.page-width {
+/* Full-width only for collection/product grid pages */
+.collection .page-width,
+.product-grid-container,
+.collection.page-width {
   max-width: 100% !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
 
-@media screen and (min-width: 750px) {
-  .page-width {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
+.template-page .page-width,
+.template-contact .page-width {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+body.template-contact #MainContent,
+body.template-page #MainContent {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
 }
 
 .card__content,
