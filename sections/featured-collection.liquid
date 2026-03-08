@@ -132,6 +132,16 @@
               </li>
               {%- assign skip_card_product_styles = true -%}
             {%- endfor -%}
+            {% assign total_products = section.settings.collection.products.size %}
+            {% assign remainder_desktop = total_products | modulo: 4 %}
+            {% assign remainder_mobile = total_products | modulo: 2 %}
+
+            {% if remainder_desktop != 0 %}
+              {% assign empty_cards = 4 | minus: remainder_desktop %}
+              {% for i in (1..empty_cards) %}
+                <li class="grid__item empty-card"></li>
+              {% endfor %}
+            {% endif %}
           {% endpaginate %}
         {%- else -%}
           {%- for i in (1..section.settings.columns_desktop) -%}

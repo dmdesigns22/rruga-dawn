@@ -12,7 +12,7 @@
 
 *, *::before, *::after {
   font-family: 'Space Mono', monospace !important;
-  font-size: 12px !important;
+  font-size: 11px !important;
   font-weight: 400 !important;
   text-transform: uppercase !important;
   border-radius: 0 !important;
@@ -3635,8 +3635,9 @@ details-disclosure > details {
    ============================================= */
 
 ul.product-grid {
-  border-top: 1px solid #000000 !important;
-  border-left: 1px solid #000000 !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
   gap: 0 !important;
   column-gap: 0 !important;
   row-gap: 0 !important;
@@ -3657,6 +3658,10 @@ li.grid__item {
   width: 100% !important;
   max-width: 100% !important;
   flex: none !important;
+}
+
+li.grid__item:nth-child(4n) {
+  border-right: none !important;
 }
 
 .card-wrapper {
@@ -3745,6 +3750,12 @@ li.grid__item {
   ul.product-grid {
     grid-template-columns: repeat(2, 1fr) !important;
   }
+  li.grid__item:nth-child(2n) {
+    border-right: none !important;
+  }
+  li.grid__item:nth-child(4n) {
+    border-right: 1px solid #000000 !important;
+  }
 }
 
 /* Full-width grid — remove all container constraints */
@@ -3810,6 +3821,197 @@ main#MainContent,
   margin-top: 2px !important;
 }
 
+.empty-card {
+  border-right: 1px solid #000000 !important;
+  border-bottom: 1px solid #000000 !important;
+}
+
+@media screen and (max-width: 749px) {
+  .empty-card:nth-child(odd) {
+    display: block;
+  }
+  .empty-card:nth-child(even) {
+    display: none;
+  }
+}
+
+html, body {
+  overflow-x: clip !important;
+  max-width: 100% !important;
+}
+
+.card__media,
+.card__inner {
+  padding-top: 15px !important;
+}
+
+.card__inner .media,
+.card__media .media {
+  margin-top: 15px !important;
+}
+
 /* =============================================
    End RRUGA Product Grid
    ============================================= */
+
+.featured-collection,
+[class*="section-"][class*="-padding"],
+.shopify-section:first-child {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+footer,
+.footer {
+  padding: 0 !important;
+  margin: 0 !important;
+  min-height: 0 !important;
+}
+
+[class*="section-template"][class*="padding"],
+[class*="section-"][class*="-padding"] {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* =============================================
+   RRUGA Navbar
+   ============================================= */
+
+.rruga-header {
+  background: #ffffff !important;
+  border-bottom: 1px solid #000000 !important;
+  width: 100% !important;
+}
+
+.rruga-nav {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 0 10px !important;
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+.rruga-nav__left,
+.rruga-nav__right {
+  flex: 1 !important;
+  display: flex !important;
+  align-items: stretch !important;
+}
+
+.rruga-nav__right {
+  justify-content: flex-end !important;
+}
+
+.rruga-nav__center {
+  flex: 1 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.rruga-nav__brand {
+  font-family: 'Space Mono', monospace !important;
+  font-size: 11px !important;
+  font-weight: 400 !important;
+  text-transform: uppercase !important;
+  color: #000000 !important;
+  text-decoration: none !important;
+  letter-spacing: 0.08em !important;
+}
+
+.rruga-nav__item {
+  display: flex !important;
+  align-items: center !important;
+  font-family: 'Space Mono', monospace !important;
+  font-size: 11px !important;
+  font-weight: 400 !important;
+  text-transform: uppercase !important;
+  color: #FFFFFF !important;
+  text-decoration: none !important;
+  background: #B2B2B5 !important;
+  border: none !important;
+  padding: 5px !important;
+  margin: 6px 0 6px 6px !important;
+  border-radius: 2px !important;
+  letter-spacing: 0.05em !important;
+  white-space: nowrap !important;
+  line-height: 1 !important;
+}
+
+.rruga-nav__left .rruga-nav__item {
+  margin: 6px 6px 6px 0 !important;
+}
+
+.rruga-nav__left .rruga-nav__item:first-child {
+  margin-left: 6px !important;
+}
+
+/* Override Dawn header wrapper styles */
+.header-wrapper {
+  padding: 0 !important;
+  margin: 0 !important;
+  background: #ffffff !important;
+  box-shadow: none !important;
+  border-bottom: none !important;
+}
+
+/* Mobile: stack to hamburger-less simple row */
+@media screen and (max-width: 749px) {
+  .rruga-nav__left .rruga-nav__item:nth-child(n+2) {
+    display: none !important;
+  }
+  .rruga-nav__right .rruga-nav__item:nth-child(1) {
+    display: none !important;
+  }
+}
+
+.header__inner,
+.header,
+header .header {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+header,
+.header,
+sticky-header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 100 !important;
+  background: #FFFFFF !important;
+}
+
+sticky-header,
+.header-wrapper.section-header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+  background: #FFFFFF !important;
+}
+
+.rruga-nav__item.nav-active {
+  background: #000000 !important;
+  color: #FFFFFF !important;
+}
+
+.rruga-nav__item:hover {
+  background: #000000 !important;
+  color: #FFFFFF !important;
+}
+
+.rruga-nav__search,
+.rruga-nav__account {
+  display: none !important;
+}
+
+/* =============================================
+   End RRUGA Navbar
+   ============================================= */
+
+.featured-collection,
+.shopify-section:first-of-type,
+[class*="featured-collection"] {
+  border-top: none !important;
+}
