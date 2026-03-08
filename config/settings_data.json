@@ -142,6 +142,7 @@
       "preloader": {
         "type": "preloader",
         "settings": {
+          "show_preloader": true,
           "preloader_logo": "shopify://shop_images/8Asset_w.png",
           "logo_width": 90,
           "preloader_text": "",
