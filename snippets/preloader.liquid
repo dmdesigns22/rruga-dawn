@@ -44,11 +44,25 @@
 
 <script>
 window.addEventListener('load', function() {
+  const preloader = document.getElementById('rruga-preloader');
+  if (!preloader) return;
+
+  const hasSeenPreloader = sessionStorage.getItem('rruga_preloader_shown');
+
+  if (hasSeenPreloader) {
+    preloader.style.display = 'none';
+    return;
+  }
+
+  sessionStorage.setItem('rruga_preloader_shown', 'true');
+
+  const duration = parseInt(preloader.dataset.duration || 1800);
   setTimeout(function() {
-    const preloader = document.getElementById('rruga-preloader');
     preloader.classList.add('fade-out');
-    setTimeout(function() { preloader.style.display = 'none'; }, 600);
-  }, {{ section.settings.preloader_duration | default: 1800 }});
+    setTimeout(function() {
+      preloader.style.display = 'none';
+    }, 600);
+  }, duration);
 });
 </script>
 {% endif %}
