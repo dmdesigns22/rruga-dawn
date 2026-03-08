@@ -4127,3 +4127,10 @@ sticky-header,
 .card__heading a {
   text-decoration: none !important;
 }
+
+@media screen and (min-width: 750px) {
+  .template-page .rich-text__blocks {
+    width: 50% !important;
+    max-width: 50% !important;
+  }
+}
