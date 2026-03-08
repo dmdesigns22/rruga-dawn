@@ -3818,10 +3818,6 @@ body.template-page #MainContent {
   padding-right: 10px !important;
 }
 
-.card__content,
-.card__information {
-  padding-left: 10px !important;
-}
 
 .card__media img,
 .card__media .media img {
