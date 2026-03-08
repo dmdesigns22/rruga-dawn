@@ -17,7 +17,7 @@
   text-transform: uppercase !important;
   border-radius: 0 !important;
   box-shadow: none !important;
-  letter-spacing: 0.05em;
+  letter-spacing: 0 !important;
   line-height: 1 !important;
 }
 
