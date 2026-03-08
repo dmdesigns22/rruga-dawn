@@ -4189,3 +4189,10 @@ sticky-header,
 #shopify-section-related-products .related-products__heading {
   padding-left: 10px !important;
 }
+
+#MainContent .product__info-wrapper {
+  position: sticky !important;
+  top: 37px !important;
+  height: calc(100vh - 37px) !important;
+  overflow-y: auto !important;
+}
