@@ -541,16 +541,26 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
 <script>
-gsap.registerPlugin(ScrollTrigger);
+function initGsap() {
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.from('.card__media, .card__information', {
+    scrollTrigger: {
+      trigger: '.product-grid',
+      start: 'top 80%',
+    },
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.12,
+    ease: 'power1.out'
+  });
+}
 
-gsap.from('.grid__item', {
-  scrollTrigger: {
-    trigger: '.product-grid',
-    start: 'top 80%',
-  },
-  opacity: 0,
-  duration: 0.8,
-  stagger: 0.12,
-  ease: 'power1.out'
-});
+const preloader = document.getElementById('rruga-preloader');
+if (preloader) {
+  preloader.addEventListener('transitionend', function() {
+    initGsap();
+  });
+} else {
+  window.addEventListener('load', initGsap);
+}
 </script>
