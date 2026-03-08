@@ -4135,7 +4135,6 @@ sticky-header,
   }
 }
 
-.template-cart cart-items,
-.template-cart .cart__contents {
+.template-cart .title-wrapper-with-link {
   padding-top: 10px !important;
 }
