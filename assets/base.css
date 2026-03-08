@@ -4088,3 +4088,11 @@ sticky-header,
 .global-media-settings {
   border: none !important;
 }
+
+:root {
+  --page-width: 100%;
+}
+
+:root {
+  --page-width: 100%;
+}
