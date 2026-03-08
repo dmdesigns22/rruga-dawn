@@ -4130,3 +4130,16 @@ sticky-header,
     overflow-y: auto !important;
   }
 }
+
+@media screen and (min-width: 750px) {
+  .product__info-container {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    height: 100% !important;
+  }
+
+  .product-form {
+    margin-top: auto !important;
+  }
+}
