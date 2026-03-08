@@ -4192,7 +4192,7 @@ sticky-header,
 
 #MainContent .product__info-wrapper {
   position: sticky !important;
-  top: 37px !important;
-  height: calc(100vh - 37px) !important;
+  top: 0 !important;
+  height: 100vh !important;
   overflow-y: auto !important;
 }
