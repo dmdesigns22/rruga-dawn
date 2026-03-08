@@ -544,8 +544,9 @@
 document.addEventListener('DOMContentLoaded', function() {
   gsap.registerPlugin(ScrollTrigger);
 
+  const hasSeenPreloader = sessionStorage.getItem('rruga_preloader_shown');
   const preloader = document.getElementById('rruga-preloader');
-  const preloaderDuration = preloader ? parseInt(preloader.dataset.duration || 1800) + 600 : 0;
+  const preloaderDuration = (!hasSeenPreloader && preloader) ? parseInt(preloader.dataset.duration || 1800) + 600 : 0;
 
   gsap.set('.card__media, .card__information', { opacity: 0 });
 
