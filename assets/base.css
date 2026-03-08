@@ -4108,3 +4108,16 @@ sticky-header,
   height: 100% !important;
   object-fit: contain !important;
 }
+
+.product-media-container .media {
+  padding-top: 100% !important;
+}
+
+.product-media-container img {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
