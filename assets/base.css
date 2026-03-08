@@ -4135,7 +4135,6 @@ sticky-header,
   }
 }
 
-cart-items {
-  display: block !important;
+.template-cart .page-width {
   padding-top: 10px !important;
 }
