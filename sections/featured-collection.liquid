@@ -543,16 +543,18 @@
 <script>
 function initGsap() {
   gsap.registerPlugin(ScrollTrigger);
-  gsap.from('.card__media, .card__information', {
-    scrollTrigger: {
-      trigger: '.product-grid',
-      start: 'top 80%',
-    },
-    opacity: 0,
-    duration: 0.8,
-    stagger: 0.12,
-    ease: 'power1.out'
-  });
+  setTimeout(function() {
+    gsap.from('.card__media, .card__information', {
+      scrollTrigger: {
+        trigger: '.product-grid',
+        start: 'top 80%',
+      },
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.12,
+      ease: 'power1.out'
+    });
+  }, 1000);
 }
 
 const preloader = document.getElementById('rruga-preloader');
