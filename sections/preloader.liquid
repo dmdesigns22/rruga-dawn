@@ -1,0 +1,42 @@
+{% render 'preloader' %}
+
+{% schema %}
+{
+  "name": "Preloader",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "preloader_logo",
+      "label": "Logo"
+    },
+    {
+      "type": "text",
+      "id": "preloader_text",
+      "label": "Text",
+      "default": "RRUGA STUDIOS"
+    },
+    {
+      "type": "color",
+      "id": "preloader_bg",
+      "label": "Background color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "preloader_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "preloader_duration",
+      "label": "Duration (ms)",
+      "min": 500,
+      "max": 5000,
+      "step": 100,
+      "default": 1800
+    }
+  ],
+  "presets": [{ "name": "Preloader" }]
+}
+{% endschema %}
