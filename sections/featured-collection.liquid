@@ -541,10 +541,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
 <script>
-function initGsap(delay) {
+document.addEventListener('DOMContentLoaded', function() {
   gsap.registerPlugin(ScrollTrigger);
 
-  // Set all items invisible immediately
+  const preloader = document.getElementById('rruga-preloader');
+  const preloaderDuration = preloader ? parseInt(preloader.dataset.duration || 1800) + 600 : 0;
+
   gsap.set('.card__media, .card__information', { opacity: 0 });
 
   setTimeout(function() {
@@ -552,20 +554,11 @@ function initGsap(delay) {
       opacity: 1,
       duration: 0.8,
       stagger: {
-        amount: 1.2,
+        amount: 1.5,
         from: 'start'
       },
       ease: 'power1.out'
     });
-  }, delay || 0);
-}
-
-const preloader = document.getElementById('rruga-preloader');
-if (preloader) {
-  const preloaderDuration = parseInt(preloader.dataset.duration || 1800);
-  const fadeDuration = 600;
-  initGsap(preloaderDuration + fadeDuration);
-} else {
-  window.addEventListener('load', function() { initGsap(0); });
-}
+  }, preloaderDuration);
+});
 </script>
