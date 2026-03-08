@@ -1,3 +1,4 @@
+{% if section.settings.show_preloader %}
 <div id="rruga-preloader">
   <div class="rruga-preloader__inner">
     {% if section.settings.preloader_logo != blank %}
@@ -50,3 +51,4 @@ window.addEventListener('load', function() {
   }, {{ section.settings.preloader_duration | default: 1800 }});
 });
 </script>
+{% endif %}
