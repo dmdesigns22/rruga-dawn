@@ -1,3 +1,37 @@
+/* =============================================
+   RRUGA STUDIOS — Global Base Styles
+   ============================================= */
+
+@font-face {
+  font-family: 'Space Mono';
+  src: url('{{ 'SpaceMono-Regular.woff2' | asset_url }}') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+*, *::before, *::after {
+  font-family: 'Space Mono', monospace !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  text-transform: uppercase !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+}
+
+html, body {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* =============================================
+   End RRUGA Global Styles
+   ============================================= */
+
 :root {
   --alpha-button-background: 1;
   --alpha-button-border: 1;
@@ -3595,3 +3629,187 @@ details-disclosure > details {
     transform: translateX(100%) scaleX(0);
   }
 }
+
+/* =============================================
+   RRUGA — Product Grid (Collection Page)
+   ============================================= */
+
+ul.product-grid {
+  border-top: 1px solid #000000 !important;
+  border-left: 1px solid #000000 !important;
+  gap: 0 !important;
+  column-gap: 0 !important;
+  row-gap: 0 !important;
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  margin-bottom: 0 !important;
+  list-style: none !important;
+  overflow: visible !important;
+}
+
+li.grid__item {
+  border-right: 1px solid #000000 !important;
+  border-bottom: 1px solid #000000 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  flex: none !important;
+}
+
+.card-wrapper {
+  height: 100%;
+}
+
+/* Strip Dawn card decoration */
+#product-grid .card-wrapper,
+#product-grid .product-card-wrapper {
+  background: #FFFFFF !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+#product-grid .card,
+#product-grid .card__inner {
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  background: #FFFFFF !important;
+}
+
+#product-grid .card--standard .card__inner:after {
+  display: none !important;
+}
+
+/* Portrait image ratio (4:5) */
+#product-grid .card__inner.ratio::before {
+  padding-top: 125% !important;
+}
+
+#product-grid .card__media,
+#product-grid .card .media {
+  border-radius: 0 !important;
+  background: #FFFFFF !important;
+}
+
+#product-grid .card__media .media img,
+#product-grid .card .media img {
+  object-fit: cover !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+}
+
+#product-grid .card__content {
+  padding: 8px !important;
+  background: #FFFFFF !important;
+}
+
+#product-grid .card__information {
+  padding: 0 !important;
+}
+
+#product-grid .card__inner .card__content {
+  display: none !important;
+}
+
+#product-grid .card__heading,
+#product-grid .card__heading a {
+  font-family: 'Space Mono', monospace !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  text-transform: uppercase !important;
+  color: #000000 !important;
+  margin: 0 0 4px 0 !important;
+  text-decoration: none !important;
+  letter-spacing: 0.05em !important;
+  line-height: 1.6 !important;
+}
+
+#product-grid .price,
+#product-grid .price__regular,
+#product-grid .price-item {
+  font-family: 'Space Mono', monospace !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  color: #000000 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* Mobile: 2 columns */
+@media screen and (max-width: 749px) {
+  ul.product-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Full-width grid — remove all container constraints */
+.collection.page-width,
+.collection,
+.product-grid-container,
+.facets-wrapper.page-width {
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  width: 100% !important;
+}
+
+/* Override .page-width padding on collection containers (base.css sets 1.5rem/5rem) */
+#MainContent,
+main#MainContent,
+.section-template--collection,
+[class*="section-"][class*="-padding"] {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  max-width: 100% !important;
+}
+
+/* Force full-width: override --page-width variable and .page-width padding */
+:root {
+  --page-width: 100% !important;
+}
+
+.page-width {
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+@media screen and (min-width: 750px) {
+  .page-width {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+.card__content,
+.card__information {
+  padding-left: 10px !important;
+}
+
+.card__media img,
+.card__media .media img {
+  transform: none !important;
+  transition: none !important;
+}
+
+.card:hover .card__media img,
+.card--standard:hover .card__media .media > * {
+  transform: none !important;
+}
+
+.card__information .price,
+.card__information .price-wrapper,
+.card__information > * + * {
+  margin-top: 2px !important;
+}
+
+/* =============================================
+   End RRUGA Product Grid
+   ============================================= */
