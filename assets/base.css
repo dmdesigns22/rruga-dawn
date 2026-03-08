@@ -4138,3 +4138,11 @@ sticky-header,
 .template-cart .page-width {
   padding-top: 10px !important;
 }
+
+:root {
+  --product-card-text-alignment: center;
+}
+
+.card__information {
+  text-align: center !important;
+}
