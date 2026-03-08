@@ -4124,24 +4124,9 @@ sticky-header,
 
 @media screen and (min-width: 750px) {
   .product__info-wrapper {
-    display: flex !important;
-    flex-direction: column !important;
-    height: calc(100vh - 37px) !important;
     position: sticky !important;
     top: 0 !important;
-    overflow-y: auto !important;
-    overflow-x: hidden !important;
-  }
-
-  .product__info-container.product__column-sticky {
-    display: flex !important;
-    flex-direction: column !important;
-    flex: 1 !important;
-    height: 100% !important;
-    position: static !important;
-  }
-
-  .product__info-container .product-form {
-    margin-top: auto !important;
+    height: calc(100vh - 37px) !important;
+    overflow-y: scroll !important;
   }
 }
