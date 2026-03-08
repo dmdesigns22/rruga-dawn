@@ -4122,11 +4122,8 @@ sticky-header,
   object-fit: contain !important;
 }
 
-@media screen and (min-width: 750px) {
-  .product__info-wrapper {
-    position: sticky !important;
-    top: 0 !important;
-    height: calc(100vh - 37px) !important;
-    overflow-y: scroll !important;
-  }
+.card__heading a:hover,
+.card-information__text a:hover,
+.card__heading a {
+  text-decoration: none !important;
 }
