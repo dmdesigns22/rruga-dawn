@@ -4121,3 +4121,12 @@ sticky-header,
   height: 100% !important;
   object-fit: contain !important;
 }
+
+@media screen and (min-width: 750px) {
+  .product__info-wrapper {
+    height: calc(100vh - var(--header-height, 37px)) !important;
+    position: sticky !important;
+    top: 0 !important;
+    overflow-y: auto !important;
+  }
+}
