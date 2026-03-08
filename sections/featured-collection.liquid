@@ -543,12 +543,18 @@
 <script>
 function initGsap(delay) {
   gsap.registerPlugin(ScrollTrigger);
+
+  // Set all items invisible immediately
+  gsap.set('.card__media, .card__information', { opacity: 0 });
+
   setTimeout(function() {
-    ScrollTrigger.refresh();
-    gsap.from('.card__media, .card__information', {
-      opacity: 0,
+    gsap.to('.card__media, .card__information', {
+      opacity: 1,
       duration: 0.8,
-      stagger: 0.12,
+      stagger: {
+        amount: 1.2,
+        from: 'start'
+      },
       ease: 'power1.out'
     });
   }, delay || 0);
