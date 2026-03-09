@@ -4189,3 +4189,19 @@ sticky-header,
 #shopify-section-related-products .related-products__heading {
   padding-left: 10px !important;
 }
+
+.rruga-nav__right {
+  position: relative !important;
+}
+
+.rruga-nav .cart-count-bubble {
+  position: absolute !important;
+  top: -4px !important;
+  right: -4px !important;
+  left: auto !important;
+  z-index: 10 !important;
+}
+
+.rruga-nav__left .cart-count-bubble {
+  display: none !important;
+}
