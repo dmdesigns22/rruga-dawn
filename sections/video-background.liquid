@@ -49,6 +49,31 @@
     {% endif %}
   {% endif %}
 
+  {% if section.settings.fallback_image != blank %}
+  <div class="rruga-video__fallback" id="fallback-{{ section.id }}" style="
+    position:absolute;top:0;left:0;width:100%;height:100%;
+    background-image:url('{{ section.settings.fallback_image | img_url: '2000x' }}');
+    background-size:cover;
+    background-position:center;
+    display:none;
+  "></div>
+  {% endif %}
+
+  <button class="rruga-video__play" id="play-{{ section.id }}" style="
+    position:absolute;top:50%;left:50%;
+    transform:translate(-50%,-50%);
+    background:transparent;
+    border:2px solid {{ section.settings.play_button_color }};
+    color:{{ section.settings.play_button_color }};
+    font-family:'Space Mono',monospace;
+    font-size:11px;
+    text-transform:uppercase;
+    padding:10px 20px;
+    cursor:pointer;
+    z-index:3;
+    display:none;
+  ">PLAY</button>
+
   {% if section.settings.overlay_show %}
   <div style="
     position:absolute;top:0;left:0;width:100%;height:100%;
@@ -71,6 +96,46 @@
     pointer-events:none;
   ">{{ section.settings.text }}</div>
   {% endif %}
+
+  <script>
+  (function() {
+    const section = document.getElementById('rruga-video-{{ section.id }}');
+    const fallback = document.getElementById('fallback-{{ section.id }}');
+    const playBtn = document.getElementById('play-{{ section.id }}');
+    const video = section ? section.querySelector('video') : null;
+    const iframe = section ? section.querySelector('iframe') : null;
+
+    if (video) {
+      video.play().catch(function() {
+        if (fallback) fallback.style.display = 'block';
+        if (playBtn) playBtn.style.display = 'block';
+      });
+
+      if (playBtn) {
+        playBtn.addEventListener('click', function() {
+          video.play();
+          playBtn.style.display = 'none';
+          if (fallback) fallback.style.display = 'none';
+        });
+      }
+    } else if (iframe) {
+      if (navigator.userAgent.match(/iPhone|iPad/i)) {
+        setTimeout(function() {
+          if (fallback) fallback.style.display = 'block';
+          if (playBtn) playBtn.style.display = 'block';
+        }, 2000);
+
+        if (playBtn) {
+          playBtn.addEventListener('click', function() {
+            if (fallback) fallback.style.display = 'none';
+            playBtn.style.display = 'none';
+            iframe.src = iframe.src;
+          });
+        }
+      }
+    }
+  })();
+  </script>
 </div>
 {% endif %}
 
@@ -157,6 +222,17 @@
       "max": 80,
       "step": 2,
       "default": 14
+    },
+    {
+      "type": "image_picker",
+      "id": "fallback_image",
+      "label": "Fallback image (shown when video can't play)"
+    },
+    {
+      "type": "color",
+      "id": "play_button_color",
+      "label": "Play button color",
+      "default": "#ffffff"
     }
   ],
   "presets": [{ "name": "Video Background" }]
