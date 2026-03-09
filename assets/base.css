@@ -4194,6 +4194,8 @@ sticky-header,
   ul.product-grid {
     border-top: 1px solid #000000 !important;
     border-left: 1px solid #000000 !important;
+    border-right: none !important;
+    border-bottom: none !important;
   }
 
   li.grid__item {
