@@ -4190,10 +4190,6 @@ sticky-header,
   padding-left: 10px !important;
 }
 
-.related-products {
-  padding-top: 20px !important;
-}
-
-.product-recommendations {
+.product-recommendations.related-products {
   padding-top: 20px !important;
 }
