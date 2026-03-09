@@ -3852,6 +3852,11 @@ body.template-page #MainContent {
   border-bottom: 1px solid #000000 !important;
 }
 
+.empty-card:last-child,
+li.grid__item:last-child {
+  border-bottom: none !important;
+}
+
 @media screen and (max-width: 749px) {
   .empty-card:nth-child(odd) {
     display: block;
