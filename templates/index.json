@@ -9,6 +9,22 @@
  */
 {
   "sections": {
+    "video_background_9Chxf3": {
+      "type": "video-background",
+      "name": "Video Background",
+      "settings": {
+        "show_section": true,
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/0cdf3830cfa54e318ae19e476de6d9d4.mp4",
+        "section_height": 100,
+        "video_scale": 100,
+        "overlay_show": false,
+        "overlay_color": "#000000",
+        "overlay_opacity": 40,
+        "text": "",
+        "text_color": "#ffffff",
+        "text_size": 14
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -36,26 +52,10 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
-    },
-    "video_background_9Chxf3": {
-      "type": "video-background",
-      "name": "Video Background",
-      "settings": {
-        "show_section": true,
-        "video_url": "https://cdn.shopify.com/videos/c/o/v/0cdf3830cfa54e318ae19e476de6d9d4.mp4",
-        "section_height": 100,
-        "video_scale": 100,
-        "overlay_show": false,
-        "overlay_color": "#000000",
-        "overlay_opacity": 40,
-        "text": "",
-        "text_color": "#ffffff",
-        "text_size": 14
-      }
     }
   },
   "order": [
-    "featured_collection",
-    "video_background_9Chxf3"
+    "video_background_9Chxf3",
+    "featured_collection"
   ]
 }
