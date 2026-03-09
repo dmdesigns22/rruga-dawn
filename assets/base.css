@@ -4189,3 +4189,7 @@ sticky-header,
 #shopify-section-related-products .related-products__heading {
   padding-left: 10px !important;
 }
+
+.related-products {
+  padding-top: 20px !important;
+}
