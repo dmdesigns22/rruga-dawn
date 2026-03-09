@@ -1,10 +1,17 @@
 {% if section.settings.show_section %}
-<div class="rruga-video-section" style="
+<div class="rruga-video-section" id="rruga-video-{{ section.id }}" style="
   height: {{ section.settings.section_height }}vh;
   position: relative;
   overflow: hidden;
   width: 100%;
 ">
+  <style>
+    @media screen and (max-width: 749px) {
+      #rruga-video-{{ section.id }} {
+        height: {{ section.settings.section_height_mobile }}vh !important;
+      }
+    }
+  </style>
   {% if section.settings.video_url != blank %}
     {% assign video_url = section.settings.video_url %}
     {% if video_url contains 'youtube.com' or video_url contains 'youtu.be' %}
@@ -84,6 +91,15 @@
       "max": 100,
       "step": 5,
       "default": 100
+    },
+    {
+      "type": "range",
+      "id": "section_height_mobile",
+      "label": "Section height mobile (vh)",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "default": 50
     },
     {
       "type": "range",
