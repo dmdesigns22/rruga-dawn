@@ -3758,21 +3758,10 @@ li.grid__item:nth-child(4n) {
 @media screen and (max-width: 749px) {
   ul.product-grid {
     grid-template-columns: repeat(2, 1fr) !important;
-    border-top: none !important;
-    border-left: none !important;
   }
-
-  li.grid__item {
-    border-right: 1px solid #000000 !important;
-    border-bottom: 1px solid #000000 !important;
-    border-left: none !important;
-    border-top: none !important;
-  }
-
   li.grid__item:nth-child(2n) {
     border-right: none !important;
   }
-
   li.grid__item:nth-child(4n) {
     border-right: 1px solid #000000 !important;
   }
@@ -3850,11 +3839,6 @@ body.template-page #MainContent {
 .empty-card {
   border-right: 1px solid #000000 !important;
   border-bottom: 1px solid #000000 !important;
-}
-
-.empty-card:last-child,
-li.grid__item:last-child {
-  border-bottom: none !important;
 }
 
 @media screen and (max-width: 749px) {
