@@ -16,6 +16,7 @@
         "show_section": true,
         "video_url": "https://cdn.shopify.com/videos/c/o/v/0cdf3830cfa54e318ae19e476de6d9d4.mp4",
         "section_height": 100,
+        "section_height_mobile": 70,
         "video_scale": 100,
         "overlay_show": false,
         "overlay_color": "#000000",
