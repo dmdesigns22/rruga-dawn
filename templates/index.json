@@ -20,7 +20,7 @@
         "video_scale": 100,
         "overlay_show": false,
         "overlay_color": "#000000",
-        "overlay_opacity": 40,
+        "overlay_opacity": 0,
         "text": "",
         "text_color": "#ffffff",
         "text_size": 14
