@@ -3870,7 +3870,7 @@ html, body {
    ============================================= */
 
 .featured-collection,
-[class*="section-"][class*="-padding"],
+[class*="section-"][class*="-padding"]:not(product-recommendations),
 .shopify-section:first-child {
   padding-top: 0 !important;
   margin-top: 0 !important;
@@ -4188,8 +4188,4 @@ sticky-header,
 .related-products .related-products__heading,
 #shopify-section-related-products .related-products__heading {
   padding-left: 10px !important;
-}
-
-.product-recommendations.related-products {
-  padding-top: 20px !important;
 }
