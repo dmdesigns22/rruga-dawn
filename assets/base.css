@@ -4189,3 +4189,21 @@ sticky-header,
 #shopify-section-related-products .related-products__heading {
   padding-left: 10px !important;
 }
+
+@media screen and (max-width: 749px) {
+  ul.product-grid {
+    border-top: 1px solid #000000 !important;
+    border-left: 1px solid #000000 !important;
+  }
+
+  li.grid__item {
+    border-right: 1px solid #000000 !important;
+    border-bottom: 1px solid #000000 !important;
+    border-left: none !important;
+    border-top: none !important;
+  }
+
+  li.grid__item:nth-child(2n) {
+    border-right: none !important;
+  }
+}
