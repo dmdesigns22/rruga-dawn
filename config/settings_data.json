@@ -149,7 +149,7 @@
           "preloader_text": "",
           "preloader_bg": "#000000",
           "preloader_color": "#ffffff",
-          "preloader_duration": 1100
+          "preloader_duration": 800
         }
       }
     },
