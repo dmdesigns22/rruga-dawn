@@ -1,17 +1,24 @@
 {% if section.settings.show_section %}
-<div class="rruga-video-section" id="rruga-video-{{ section.id }}" style="
-  height: {{ section.settings.section_height }}vh;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-">
+<div class="rruga-video-section" id="rruga-video-{{ section.id }}" style="position:relative;overflow:hidden;width:100%;">
   <style>
+    #rruga-video-{{ section.id }} {
+      height: calc({{ section.settings.section_height }}vh - var(--header-height, 0px));
+    }
     @media screen and (max-width: 749px) {
       #rruga-video-{{ section.id }} {
-        height: {{ section.settings.section_height_mobile }}vh !important;
+        height: calc({{ section.settings.section_height_mobile }}vh - var(--header-height, 0px)) !important;
       }
     }
   </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const nav = document.querySelector('.rruga-nav');
+      if (nav) {
+        const navHeight = nav.offsetHeight + 'px';
+        document.documentElement.style.setProperty('--header-height', navHeight);
+      }
+    });
+  </script>
   {% if section.settings.video_url != blank %}
     {% assign video_url = section.settings.video_url %}
     {% if video_url contains 'youtube.com' or video_url contains 'youtu.be' %}
