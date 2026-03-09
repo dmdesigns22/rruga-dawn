@@ -355,16 +355,20 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
 <script>
-gsap.registerPlugin(ScrollTrigger);
+document.addEventListener('DOMContentLoaded', function() {
+  gsap.registerPlugin(ScrollTrigger);
 
-gsap.from('.rich-text__blocks > *', {
-  scrollTrigger: {
-    trigger: '.rich-text__blocks',
-    start: 'top 80%',
-  },
-  opacity: 0,
-  duration: 0.8,
-  stagger: 0.12,
-  ease: 'power1.out'
+  gsap.set('.rich-text__blocks > *', { opacity: 0 });
+
+  gsap.to('.rich-text__blocks > *', {
+    scrollTrigger: {
+      trigger: '.rich-text__blocks',
+      start: 'top 80%',
+    },
+    opacity: 1,
+    duration: 0.8,
+    stagger: 0.12,
+    ease: 'power1.out'
+  });
 });
 </script>
