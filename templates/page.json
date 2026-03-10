@@ -45,14 +45,42 @@
         "color_scheme": "",
         "full_width": true,
         "padding_top": 10,
-        "padding_bottom": 52,
+        "padding_bottom": 0,
         "side_image": "shopify://shop_images/260212000062700025_copy.jpg",
         "side_image_alt": ""
+      }
+    },
+    "newsletter_MTgTKp": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_7NzMk6": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to our emails",
+            "heading_size": "h1"
+          }
+        },
+        "email_form_Y3fQWb": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_7NzMk6",
+        "email_form_Y3fQWb"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 12,
+        "padding_bottom": 28
       }
     }
   },
   "order": [
     "main",
-    "rich_text_xk9dVj"
+    "rich_text_xk9dVj",
+    "newsletter_MTgTKp"
   ]
 }
