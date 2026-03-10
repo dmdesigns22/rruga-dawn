@@ -4209,3 +4209,13 @@ sticky-header,
 .template-page .rich-text {
   padding-top: 20px !important;
 }
+
+.rich-text-with-image__image {
+  padding-bottom: 10px !important;
+}
+
+@media screen and (max-width: 749px) {
+  .rich-text-with-image__image {
+    padding-bottom: 10px !important;
+  }
+}
