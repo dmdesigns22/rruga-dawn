@@ -24,7 +24,7 @@
 <div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}" style="padding-top: {{ section.settings.padding_top }}px;">
   <div class="rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
     <div class="rich-text__wrapper rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} page-width{% endif %}">
-      <div class="rich-text-with-image" style="display:flex; align-items:flex-start; width:100%;">
+      <div class="rich-text-with-image" style="display:flex; align-items:flex-start; width:100%; gap:10px;">
         <div class="rich-text-with-image__text" style="flex:1;">
           <div class="rich-text__blocks {{ section.settings.content_alignment }}">
             {%- for block in section.blocks -%}
@@ -101,7 +101,7 @@
           </div>
         </div>
         {% if section.settings.side_image != blank %}
-        <div class="rich-text-with-image__image" style="flex:1;">
+        <div class="rich-text-with-image__image" style="flex:1; height:calc(100vh - 37px); position:sticky; top:37px; overflow:hidden;">
           <img src="{{ section.settings.side_image | img_url: 'master' }}" alt="{{ section.settings.side_image_alt }}" style="width:100%; height:100%; object-fit:cover; display:block;">
         </div>
         {% endif %}
